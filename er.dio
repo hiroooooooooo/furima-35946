@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="AUB-iVxg-zTMfUYP2IXF" name="ページ1">
-        <mxGraphModel dx="728" dy="595" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="283" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -18,8 +18,8 @@
                         <mxGeometry x="100" y="90" width="40" height="20" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="6" value="・nickname&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・email&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・password&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・last_kanji&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・first_kanji&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・last_kana&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・first_kana&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・birthday&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="80" y="110" width="80" height="120" as="geometry"/>
+                <mxCell id="6" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・nickname&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・email&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・&lt;span style=&quot;background-color: rgb(30 , 30 , 30) ; color: rgb(212 , 212 , 212) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; text-align: center&quot;&gt;encrypted_password&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・last_kanji&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・first_kanji&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・last_kana&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・first_kana&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・birthday&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="110" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=ERmany;startFill=0;endArrow=ERone;endFill=0;endSize=6;strokeColor=#f0f0f0;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry">
