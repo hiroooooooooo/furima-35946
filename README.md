@@ -57,7 +57,7 @@
 | city_name     | string     | null: false       |
 | house_num     | string     | null: false       |
 | building_name | string     |                   |
-| phone_num     | integer    | null: false       |
+| phone_num     | string     | null: false       |
 | buy           | references | foreign_key: true |
 
 ### Association
