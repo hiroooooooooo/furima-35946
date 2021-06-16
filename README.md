@@ -13,10 +13,10 @@
 
 ### Association
 
-- has_many :products
+- has_many :items
 - has_many :buys
 
-## productsテーブル
+## itemsテーブル
 
 | Column          | Type       | Options           |
 | --------------- | ---------- | ----------------- |
@@ -45,10 +45,10 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :product
-- has_one :address
+- belongs_to :item
+- has_one :order
 
-## addressesテーブル
+## ordersテーブル
 
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
