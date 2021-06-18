@@ -17,7 +17,7 @@ class User < ApplicationRecord
       validates :last_kanji
       validates :first_kanji
     end
-    with_options format: { with: /\A[ァ-ヶー]+\z/, message: 'Input full-width katakana characters' } do
+    with_options format: { with: /\A[ァ-ヶ一ー]+\z/, message: 'Input full-width katakana characters' } do
     validates :last_kana
     validates :first_kana
     end
