@@ -1,11 +1,8 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
   VALID_PASSWORD_REGIX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  # validates :password, length: {minimum: 6}, format: {with:VALID_PASSWORD_REGIX, message: 'Include both letters and numbers'}
   validates :password, format: { with: VALID_PASSWORD_REGIX, message: 'Include both letters and numbers' }
 
   with_options presence: true do
@@ -21,4 +18,6 @@ class User < ApplicationRecord
       validates :first_kana
     end
   end
+
+  has_many :items
 end
