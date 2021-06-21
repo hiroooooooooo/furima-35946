@@ -25,6 +25,6 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :status
   belongs_to :delivery_fee
-  belongs_to :prefectured
+  belongs_to :prefecture
   belongs_to :days_of_ship
 end
