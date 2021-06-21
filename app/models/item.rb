@@ -19,11 +19,12 @@ class Item < ApplicationRecord
   end
 
   belongs_to :user
+  has_one :buyer
+
   has_one_attached :image
   belongs_to :category
   belongs_to :status
   belongs_to :delivery_fee
   belongs_to :prefectured
   belongs_to :days_of_ship
-  has_one :buyer
 end
