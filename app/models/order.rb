@@ -1,12 +1,12 @@
 class Order < ApplicationRecord
 
-  with_options presence: true do
-    validates :postal_code, presence: true
-    validates :prefecture_id, presence: true
-    validates :city_name, presence: true
-    validates :house_num, presence: true
-    validates :phone_num, presence: true
-  end
+  # with_options presence: true do
+  #   validates :postal_code
+  #   validates :prefecture_id
+  #   validates :city_name
+  #   validates :house_num
+  #   validates :phone_num
+  # end
   
   belongs_to :buyer
 end
