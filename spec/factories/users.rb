@@ -1,8 +1,6 @@
 FactoryBot.define do
   factory :user do
     nickname              { 'test' }
-    # email                 {'test@com'}
-    # 【メモ】上記コードは、Fakerを使わない場合の記述
     email                 { Faker::Internet.free_email }
     password              { 'test00' }
     password_confirmation { password }
