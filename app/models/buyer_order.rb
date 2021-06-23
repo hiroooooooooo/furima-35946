@@ -1,8 +1,11 @@
 class BuyerOrder
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :postal_code, :prefecture_id, :city_name, :house_num, :building_name, :phone_num, :buyer_id
+  # [memo] attr_accessorに:tokenを指定することで、このモデルでtokenを扱えるようになる
+  attr_accessor :price, :token, :user_id, :item_id, :postal_code, :prefecture_id, :city_name, :house_num, :building_name, :phone_num, :buyer_id
 
   with_options presence: true do
+    validates :token
+
     validates :user_id
     validates :item_id
 
@@ -12,8 +15,8 @@ class BuyerOrder
     validates :house_num
     validates :phone_num, format: { with: /\d{10,11}/ }
 
-    # validates :buyer_id
-    # 【メモ】上記が必要ない理由は、この時点で生成されていない（参照できない）から
+    # [memo] validates :buyer_id
+    # [memo] 上記が必要ない理由は、この時点で生成されていない（参照できない）から
   end
 
   def save
