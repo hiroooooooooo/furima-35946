@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="AUB-iVxg-zTMfUYP2IXF" name="ページ1">
-        <mxGraphModel dx="283" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="609" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,35 +34,35 @@
                 <mxCell id="7" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="600" y="80" width="160" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="products" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="650" y="90" width="60" height="20" as="geometry"/>
+                <mxCell id="8" value="item" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="90" width="40" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・title&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・description&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・category_id&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・status_id&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・delivery_fee_id&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・prefecture_id&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・days_of_ship_id&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・price&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・user_id&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="625" y="110" width="110" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;" edge="1" parent="1" source="12" target="18">
+                <mxCell id="34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;startArrow=ERone;startFill=0;" parent="1" source="12" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="320" y="160" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="330" y="160" width="160" height="160" as="geometry"/>
                 </mxCell>
-                <object label="buys" id="16">
+                <object label="buyers" id="16">
                     <mxCell style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rotation=0;" parent="1" vertex="1">
-                        <mxGeometry x="380" y="170" width="40" height="20" as="geometry"/>
+                        <mxGeometry x="375" y="170" width="50" height="20" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="17" value="・user_id&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span&gt;・product_id&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="360" y="190" width="80" height="30" as="geometry"/>
+                <mxCell id="17" value="・user_id&lt;br&gt;&lt;div&gt;&lt;span&gt;・item&lt;/span&gt;&lt;span&gt;_id&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="190" width="70" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="320" y="440" width="160" height="160" as="geometry"/>
                 </mxCell>
-                <object label="addresses" id="19">
+                <object label="orders" id="19">
                     <mxCell style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rotation=0;" parent="1" vertex="1">
-                        <mxGeometry x="365" y="450" width="70" height="20" as="geometry"/>
+                        <mxGeometry x="375" y="450" width="50" height="20" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="20" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・postal_code&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・prefecture_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・city_name&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・house_num&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・building_name&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・phone_num&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・buy_id&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                <mxCell id="20" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・postal_code&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;・prefecture_id&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・city_name&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・house_num&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・building_name&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・phone_num&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;・buyer_id&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="345" y="470" width="110" height="120" as="geometry"/>
                 </mxCell>
             </root>

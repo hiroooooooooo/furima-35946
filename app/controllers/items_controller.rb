@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :item_find, only: [:show, :edit, :update, :destroy]
-  before_action :edit_secure, only: [:edit, :update]
+  before_action :item_security, only: [:edit, :update]
 
   def index
     @item = Item.all.order('created_at DESC')
@@ -45,8 +45,8 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def edit_secure
-    redirect_to root_path if current_user.id != @item.user_id
+  def item_security
+    redirect_to root_path if current_user.id != @item.user_id || @item.buyer.present?
   end
 
   def item_params
