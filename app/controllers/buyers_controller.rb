@@ -1,21 +1,14 @@
 class BuyersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
+  before_action :item_find, only: [:index, :create]
+  before_action :item_security, only: [:index, :create]
+
 
   def index
-    @item = Item.find(params[:item_id])
-
-    if current_user.id == @item.user_id
-      redirect_to root_path
-    elsif @item.buyer.present?
-      redirect_to root_path
-    end
-
     @buyer_order = BuyerOrder.new
   end
 
   def create
-    @item = Item.find(params[:item_id])
-
     @buyer_order = BuyerOrder.new(buyer_params)
 
     if @buyer_order.valid?
@@ -35,6 +28,18 @@ class BuyersController < ApplicationController
     params.require(:buyer_order).permit(:postal_code, :prefecture_id, :city_name, :house_num, :building_name, :phone_num).merge(
       user_id: current_user.id, token: params[:token], item_id: @item.id, price: @item.price
     )
+  end
+
+  def item_find
+    @item = Item.find(params[:item_id])
+  end
+
+  def item_security
+    if current_user.id == @item.user_id
+      redirect_to root_path
+    elsif @item.buyer.present?
+      redirect_to root_path
+    end
   end
 
   def pay_item

@@ -2,8 +2,8 @@ class BuyerOrder
   include ActiveModel::Model
   # [memo] attr_accessorに:tokenを指定することで、このモデルでtokenを扱えるようになる
   attr_accessor :price, :token, :user_id, :item_id, :postal_code, :prefecture_id, :city_name, :house_num, :building_name,
-                :phone_num, :buyer_id
-
+                :phone_num
+                
   with_options presence: true do
     validates :token
 
