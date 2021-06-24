@@ -35,9 +35,7 @@ class BuyersController < ApplicationController
   end
 
   def item_security
-    if current_user.id == @item.user_id
-      redirect_to root_path
-    elsif @item.buyer.present?
+    if current_user.id == @item.user_id || @item.buyer.present?
       redirect_to root_path
     end
   end
