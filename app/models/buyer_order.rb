@@ -1,7 +1,8 @@
 class BuyerOrder
   include ActiveModel::Model
   # [memo] attr_accessorに:tokenを指定することで、このモデルでtokenを扱えるようになる
-  attr_accessor :price, :token, :user_id, :item_id, :postal_code, :prefecture_id, :city_name, :house_num, :building_name, :phone_num, :buyer_id
+  attr_accessor :price, :token, :user_id, :item_id, :postal_code, :prefecture_id, :city_name, :house_num, :building_name,
+                :phone_num, :buyer_id
 
   with_options presence: true do
     validates :token
@@ -9,14 +10,12 @@ class BuyerOrder
     validates :user_id
     validates :item_id
 
-    validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
+    validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/ }
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :city_name
     validates :house_num
-    # validates :phone_num, format: { with: /\d{10,11}/ }
-    # validates :phone_num, format: { with: /\A\d{10,11}\z/ }
-    # validates :phone_num, format: { with: /\0\d{10,11}/ }
-    validates :phone_num, numericality: { only_integer: true }, length: { minimum: 10, maximum: 11 }
+    validates :phone_num, format: { with: /\A\d+\z/ }
+    validates :phone_num, length: { minimum: 10, maximum: 11 }
 
     # [memo] validates :buyer_id
     # [memo] 上記が必要ない理由は、この時点で生成されていない（参照できない）から
@@ -24,6 +23,7 @@ class BuyerOrder
 
   def save
     buyer = Buyer.create(user_id: user_id, item_id: item_id)
-    Order.create(postal_code: postal_code, prefecture_id: prefecture_id, city_name: city_name, house_num: house_num, building_name: building_name, phone_num: phone_num, buyer_id: buyer.id)
+    Order.create(postal_code: postal_code, prefecture_id: prefecture_id, city_name: city_name, house_num: house_num,
+                 building_name: building_name, phone_num: phone_num, buyer_id: buyer.id)
   end
 end
