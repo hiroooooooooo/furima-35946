@@ -3,7 +3,6 @@ class BuyersController < ApplicationController
   before_action :item_find, only: [:index, :create]
   before_action :item_security, only: [:index, :create]
 
-
   def index
     @buyer_order = BuyerOrder.new
   end
@@ -35,9 +34,7 @@ class BuyersController < ApplicationController
   end
 
   def item_security
-    if current_user.id == @item.user_id || @item.buyer.present?
-      redirect_to root_path
-    end
+    redirect_to root_path if current_user.id == @item.user_id || @item.buyer.present?
   end
 
   def pay_item
