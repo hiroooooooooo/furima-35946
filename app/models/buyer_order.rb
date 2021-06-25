@@ -14,8 +14,7 @@ class BuyerOrder
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :city_name
     validates :house_num
-    validates :phone_num, format: { with: /\A\d+\z/ }
-    validates :phone_num, length: { minimum: 10, maximum: 11 }
+    validates :phone_num, format: { with: /\A\d+\z/ }, length: { minimum: 10, maximum: 11 }
 
     # [memo] validates :buyer_id
     # [memo] 上記が必要ない理由は、この時点で生成されていない（参照できない）から
