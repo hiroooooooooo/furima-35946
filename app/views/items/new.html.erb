@@ -19,10 +19,24 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%# [memo] 1枚投稿時 %>
+        <%#= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :images, name:'item[images][]', id:"item-image" %>
+      </div>
+
+      <div class="weight-bold-text">
+        商品画像
+        <span class="optional">任意</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :images, name:'item[images][]', id:"item-image" %>
       </div>
     </div>
     <%# /商品画像 %>
+
     <%# 商品名と商品説明 %>
     <div class="new-items">
       <div class="weight-bold-text">
