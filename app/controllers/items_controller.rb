@@ -50,7 +50,10 @@ class ItemsController < ApplicationController
   end
 
   def item_params
+    # [memo] 1枚投稿時
+    # params.require(:item).permit(:title, :description, :category_id, :status_id, :delivery_fee_id,
+    #                              :prefecture_id, :days_of_ship_id, :price, :image).merge(user_id: current_user.id)
     params.require(:item).permit(:title, :description, :category_id, :status_id, :delivery_fee_id,
-                                 :prefecture_id, :days_of_ship_id, :price, :image).merge(user_id: current_user.id)
+                                 :prefecture_id, :days_of_ship_id, :price, images: []).merge(user_id: current_user.id)
   end
 end

@@ -2,7 +2,9 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
   with_options presence: true do
-    validates :image
+    # [memo] 1枚投稿時
+    # validates :image
+    validates :images
 
     validates :title
     validates :description
@@ -21,7 +23,10 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one :buyer
 
-  has_one_attached :image
+  # [memo] 1枚投稿時
+  # has_one_attached :image
+  has_many_attached :images
+
   belongs_to :category
   belongs_to :status
   belongs_to :delivery_fee

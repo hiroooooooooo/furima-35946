@@ -7,9 +7,12 @@
       <%= @item.title %>
     </h2>
     <div class="item-img-content">
-      <%= image_tag @item.image ,class:"item-box-img" %>
+      <%# [memo] 1枚投稿時 %>
+      <%#= image_tag @item.image ,class:"item-box-img" %>
+      <% @item.images.each do |image| %>
+        <%= image_tag image, class:"item-box-img" %>
+      <% end %>
 
-      <%# ここ %>
       <% if @item.buyer.present? %>
         <div class="sold-out">
           <span>Sold Out!!</span>
